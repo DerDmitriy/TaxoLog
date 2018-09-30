@@ -1,0 +1,30 @@
+﻿@page "{handler?}"
+
+@model SystemUserModel
+@using TestTaxoLog.Models
+
+<h2>Список пользователей</h2>
+<form method="POST">
+    <input type="text" name="name" />
+    <input type="submit" asp-page-handler="Name" value="Имя" />
+    <input type="submit" asp-page-handler="ogin" value="Логин" />
+</form>
+<table class="table">
+    <tr>
+        <td>Имя</td>
+        <td>Логин</td>
+        <td>Пароль</td>
+        <td>Телефон</td>
+        <td>E-mail</td>
+    </tr>
+    @foreach (SystemUser systemUser in Model.DisplayedSystemUser)
+    {
+        <tr>
+            <td id="@systemUser.SystemUserId.ToString()">@systemUser.Name</td>
+            <td>@systemUser.Login</td>
+            <td>@systemUser.Password</td>
+            <td>@systemUser.PhoneNumber</td>
+            <td>@systemUser.Email</td>
+        </tr>
+    }
+</table>
