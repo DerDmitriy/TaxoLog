@@ -10,47 +10,24 @@ namespace TestTaxoLog.Pages
 {
     public class SystemUserModel : PageModel
     {
-        List<SystemUser> systemUser;
+        private readonly ApplicationContext _context;
+
+        public List<SystemUser> systemUser;
         public List<SystemUser> DisplayedSystemUser { get; set; }
-        public SystemUserModel()
+        public SystemUserModel(ApplicationContext db)
         {
-            systemUser = new List<SystemUser>()
-            {
-                new SystemUser {
-                    SystemUserId = new Guid(),
-                    Name = "Никита",
-                    IsDisabled = false,
-                    Login = "Nikita",
-                    Password = "123",
-                    PhoneNumber = "-",
-                    Email = "-"
-                },
-                new SystemUser {
-                    SystemUserId = new Guid(),
-                    Name = "Давид",
-                    IsDisabled = false,
-                    Login = "David",
-                    Password = "555",
-                    PhoneNumber = "-",
-                    Email = "-"
-                },
-                new SystemUser {
-                    SystemUserId = new Guid(),
-                    Name = "Дмитрий",
-                    IsDisabled = true   ,
-                    Login = "Dmitriy",
-                    Password = "666",
-                    PhoneNumber = "-",
-                    Email = "-"
-                },
-            };
+            _context = db;
         }
 
         public void OnGet()
         {
+            systemUser = _context.SystemUser.ToList();
+        }
+        public void OnPostAll()
+        {
             DisplayedSystemUser = systemUser;
         }
-        public void OnGetByIsDisabled(bool isDisabled)
+        public void OnPostIsDisabled(bool isDisabled)
         {
             DisplayedSystemUser = systemUser.Where(su => su.IsDisabled == isDisabled).ToList();
         }

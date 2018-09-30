@@ -2,13 +2,23 @@
 
 @model SystemUserModel
 @using TestTaxoLog.Models
+@{
+    ViewData["Title"] = "Список пользователей";
+}
 
-<h2>Список пользователей</h2>
-<form method="POST">
-    <input type="text" name="name" />
-    <input type="submit" asp-page-handler="Name" value="Имя" />
-    <input type="submit" asp-page-handler="ogin" value="Логин" />
-</form>
+<h2>@ViewData["Title"]</h2>
+
+<p><a asp-page="CreateSystemUser">Добавить пользователя</a></p>
+@*<form method="POST">
+        <input type="text" name="name" />
+        <input type="submit" asp-page-handler="Name" value="Имя" />
+        <input type="submit" asp-page-handler="Login" value="Логин" />
+    </form>*@
+@*<form method="POST">
+        <input id="systemUsers" name="users" type="radio" value="All" asp-page-handler="All"/><span>Все</span>
+        <input id="systemUsers" name="users" type="radio" value="Enabled" /><span>Включннные</span>
+        <input id="systemUsers" name="users" type="radio" value="Disabled" /><span>Отключенные</span>
+    </form>*@
 <table class="table">
     <tr>
         <td>Имя</td>
@@ -17,7 +27,7 @@
         <td>Телефон</td>
         <td>E-mail</td>
     </tr>
-    @foreach (SystemUser systemUser in Model.DisplayedSystemUser)
+    @foreach (SystemUser systemUser in Model.systemUser)
     {
         <tr>
             <td id="@systemUser.SystemUserId.ToString()">@systemUser.Name</td>

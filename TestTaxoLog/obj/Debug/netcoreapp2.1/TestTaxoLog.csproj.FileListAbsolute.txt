@@ -32,3 +32,4 @@ D:\Repositories\TaxoLog\TestTaxoLog\obj\Debug\netcoreapp2.1\TestTaxoLog.pdb
 D:\Repositories\TaxoLog\TestTaxoLog\obj\Debug\netcoreapp2.1\TestTaxoLog.csproj.CopyComplete
 D:\Repositories\TaxoLog\TestTaxoLog\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 D:\Repositories\TaxoLog\TestTaxoLog\obj\Debug\netcoreapp2.1\Razor\Pages\SystemUser.g.cshtml.cs
+D:\Repositories\TaxoLog\TestTaxoLog\obj\Debug\netcoreapp2.1\Razor\Pages\CreateSystemUser.g.cshtml.cs
