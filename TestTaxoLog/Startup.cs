@@ -59,6 +59,9 @@ namespace TestTaxoLog
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
+
+
+
         }
     }
 }
