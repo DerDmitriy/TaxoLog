@@ -6,3 +6,10 @@ TAXLOG/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
 TAXLOG/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
 TAXLOG/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
 TAXLOG/obj/Debug/TAXLOG.csproj.App.config
+TestTaxoLog/obj/TestTaxoLog.csproj.nuget.cache
+TestTaxoLog/obj/Debug/netcoreapp2.1/TestTaxoLog.csprojAssemblyReference.cache
+TestTaxoLog/obj/Debug/netcoreapp2.1/TestTaxoLog.csproj.CoreCompileInputs.cache
+TestTaxoLog/obj/Debug/netcoreapp2.1/TestTaxoLog.assets.cache
+TestTaxoLog/obj/Debug/netcoreapp2.1/TestTaxoLog.RazorAssemblyInfo.cache
+TestTaxoLog/obj/Debug/netcoreapp2.1/TestTaxoLog.AssemblyInfoInputs.cache
+.vs/TAXLOG/v15/.suo
